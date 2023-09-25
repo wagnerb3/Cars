@@ -1,66 +1,80 @@
+import {useState} from 'react';
+import Select from 'react-select'
+
 function Cars() {    
+    const cars = {
+        "Acura": "https://1000logos.net/wp-content/uploads/2018/09/Acura-Logo.png",
+        "Alfa Romeo": "https://medias.fcacanada.ca//specs/alfaromeo/media/images/badge//current-badge_457d965994803bd415fc9735d023d1eb.png",
+        "Aston Martin": "https://1000logos.net/wp-content/uploads/2020/02/Aston-Martin-Logo.png",
+        "Audi": "https://i.pinimg.com/originals/a6/1f/36/a61f36fab622f8b33f207295b766ca1b.png",
+        "BMW": "https://cdn.freebiesupply.com/logos/large/2x/bmw-logo-png-transparent.png",
+        "Bentley": "https://pngimg.com/d/bentley_PNG43.png",
+        "Bugatti": "https://cdn.freebiesupply.com/logos/large/2x/bugatti-2-logo-png-transparent.png",
+        "Buick": "https://assets.stickpng.com/images/5ec3e43d58550c000442774a.png",
+        "Cadillac": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c473.png",
+        "Chevrolet": "https://1000logos.net/wp-content/uploads/2019/12/Chevrolet-Logo-2010.png",
+        "Chrysler": "https://autoworksoftampa.com/wp-content/uploads/2022/06/7-1024x576.png",
+        "DeLorean": "https://www.carlogos.org/logo/DMC-logo-1440x900.png",
+        "Dodge": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Dodge_black_logo.svg/1024px-Dodge_black_logo.svg.png",
+        "Ferrari": "https://assets.stickpng.com/images/580b585b2edbce24c47b2c52.png",
+        "Fiat": "https://cdn.freebiesupply.com/logos/large/2x/fiat-3-logo-png-transparent.png",
+        "Ford": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/2560px-Ford_logo_flat.svg.png",
+        "GMC": "https://1000logos.net/wp-content/uploads/2023/03/GMC-Logo.png",
+        "Genesis": "https://1000logos.net/wp-content/uploads/2019/10/Genesis-Logo-2015.png",
+        "Honda": "https://freepngimg.com/save/36643-honda-logo/1156x942",
+        "Hummer": "https://1000logos.net/wp-content/uploads/2020/06/Hummer-Logo-1992.png",
+        "Hyundai": "https://assets.stickpng.com/images/5ec3e3d458550c0004427747.png",
+        "Infiniti": "https://pngimg.com/d/car_logo_PNG1646.png",
+        "Jaguar": "https://assets.stickpng.com/images/5ec3e38658550c0004427745.png",
+        "Jeep": "https://assets.stickpng.com/images/6128f860e3a15c00041a8e3c.png",
+        "Kia": "https://assets.stickpng.com/images/638e307b3eae41f3706b4076.png",
+        "Lamborghini": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c48c.png",
+        "Land Rover": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c48a.png",
+        "Lexus": "https://assets.stickpng.com/images/5ec3e36558550c0004427744.png",
+        "Lincoln": "https://www.pngall.com/wp-content/uploads/13/Lincoln-Motor-Company-Logo-PNG-Picture.png",
+        "Lotus": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c48d.png",
+        "Maserati": "https://freepngimg.com/save/24485-maserati-logo-photos/3000x3000",
+        "Mazda": "https://pngimg.com/d/mazda_PNG86.png",
+        "McLaren": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c492.png",
+        "Mercedes": "https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-9-logo-png-transparent.png",
+        "Mercury": "https://clipart-library.com/new_gallery/10-102555_mercury-car-brand-logo.png",
+        "Mini": "https://pngimg.com/d/mini_PNG11789.png",
+        "Mitsubishi": "https://cdn.freebiesupply.com/logos/large/2x/mitsubishi-logo-png-transparent.png",
+        "Nissan": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Nissan_logo.png",
+        "Oldsmobile": "https://www.carlogos.org/logo/Oldsmobile-symbol-1996-1920x1080.png",
+        "Polestar": "https://www.carlogos.org/logo/Polestar-logo-1366x768.png",
+        "Pontiac": "https://www.carlogos.org/logo/Pontiac-symbol-640x1136.png",
+        "Porsche": "https://assets.stickpng.com/images/580b585b2edbce24c47b2cac.png",
+        "Ram": "https://cdn.freebiesupply.com/logos/large/2x/dodge-ram-logo-png-transparent.png",
+        "Rivian": "https://companieslogo.com/img/orig/RIVN-6c24fd1f.png?t=1635961984",
+        "Rolls-Royce": "https://www.carlogos.org/logo/Rolls-Royce-logo-2048x2048.png",
+        "Saab": "https://cdn.freebiesupply.com/logos/large/2x/saab-2-logo-png-transparent.png",
+        "Saturn": "https://cdn.freebiesupply.com/logos/large/2x/saturn-5-logo-png-transparent.png",
+        "Scion": "https://www.carlogos.org/logo/Scion-logo-2003-1920x1080.png",
+        "Smart": "https://www.carlogos.org/logo/Smart-symbol-1994-2048x2048.png",
+        "Subaru": "https://assets.stickpng.com/images/580b585b2edbce24c47b2cbf.png",
+        "Suzuki": "https://1000logos.net/wp-content/uploads/2021/04/Suzuki-logo.png",
+        "Tesla": "https://assets.stickpng.com/images/5ec40989195c530004f93f05.png",
+        "Toyota": "https://1000logos.net/wp-content/uploads/2021/04/Toyota-logo.png",
+        "Volkswagen": "https://cdn.freebiesupply.com/logos/large/2x/volkswagen-3-logo-png-transparent.png",
+        "Volvo": "https://pngimg.com/d/volvo_PNG64.png"
+    }
+    
+    const [selected, setSelected] = useState(null);
+    let image = ""
+
+    const handleChange = (selectedOption: any) => {
+      setSelected(selectedOption);
+      console.log(`Option selected:`, selectedOption);
+    };
+
+    const options = Object.keys(cars).map(m => ({value: m, label: m}));
     return (
         <div className="Cars">
             <header className="Cars-header">
             </header>
-            <select name="Make" placeholder="Select">
-                <option value="Acura">Acura</option>
-                <option value="Alfa Romeo">Alfa Romeo</option>
-                <option value="Aston Martin">Aston Martin</option>
-                <option value="Audi">Audi</option>
-                <option value="BMW">BMW</option>
-                <option value="Bentley">Bentley</option>
-                <option value="Bugatti">Bugatti</option>
-                <option value="Buick">Buick</option>
-                <option value="Cadillac">Cadillac</option>
-                <option value="Chevrolet">Chevrolet</option>
-                <option value="Chrysler">Chrysler</option>
-                <option value="DeLorean">DeLorean</option>
-                <option value="Dodge">Dodge</option>
-                <option value="Ferrari">Ferrari</option>
-                <option value="Fiat">Fiat</option>
-                <option value="Ford">Ford</option>
-                <option value="GMC">GMC</option>
-                <option value="Genesis">Genesis</option>
-                <option value="Honda">Honda</option>
-                <option value="Hummer">Hummer</option>
-                <option value="Hyundai">Hyundai</option>
-                <option value="Infinit">Infinit</option>
-                <option value="Jaguar">Jaguar</option>
-                <option value="Jeep">Jeep</option>
-                <option value="Kia">Kia</option>
-                <option value="Lamborghini">Lamborghini</option>
-                <option value="Land Rover">Rover</option>
-                <option value="Lexus">Lexus</option>
-                <option value="Lincoln">Lincoln</option>
-                <option value="Lotus">Lotus</option>
-                <option value="Maserati">Maserati</option>
-                <option value="Mazda">Mazda</option>
-                <option value="McLaren">McLaren</option>
-                <option value="Mercedes">Mercedes</option>
-                <option value="Mercury">Mercury</option>
-                <option value="Mini">Mini</option>
-                <option value="Mitsubishi">Mitsubishi</option>
-                <option value="Nissan">Nissan</option>
-                <option value="Oldsmobile">Oldsmobile</option>
-                <option value="Polestar">Polestar</option>
-                <option value="Pontiac">Pontiac</option>
-                <option value="Porsche">Porsche</option>
-                <option value="Plymouth">Plymouth</option>
-                <option value="Ram">Ram</option>
-                <option value="Rivian">Rivian</option>
-                <option value="Rolls-Royce">Rolls-Royce</option>
-                <option value="Saab">Saab</option>
-                <option value="Saturn">Saturn</option>
-                <option value="Scion">Scion</option>
-                <option value="Smart">Smart</option>
-                <option value="Subaru">Subaru</option>
-                <option value="Suzuki">Suzuki</option>
-                <option value="Tesla">Tesla</option>
-                <option value="Toyota">Toyota</option>
-                <option value="Volkswagen">Volkswagen</option>
-                <option value="Volvo">Volvo</option>
-            </select>
+            <Select options={options} onChange={handleChange}/>
+            <img src={image}></img>
         </div>
     );
 }
