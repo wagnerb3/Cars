@@ -1,13 +1,14 @@
 import React from 'react';
 import Select from 'react-select'
 
-class Cars extends React.Component<{}, { make: string, image: string }>{
+class ManufacturerSelector extends React.Component<{}, { make: string | undefined, image: string | undefined, buttonClicked: boolean }>{
 
-    constructor(props: { image: string }) {
+    constructor(props: any) {
         super(props);
         this.state = {
-            make: "",
-            image: ""
+            make: undefined,
+            image: undefined,
+            buttonClicked: false
         };
     }
     cars = [
@@ -68,8 +69,6 @@ class Cars extends React.Component<{}, { make: string, image: string }>{
         { make: "Volvo", image: "https://pngimg.com/d/volvo_PNG64.png" }
     ]
 
-
-
     createOptions = () => {
         let options: { value: number, label: string }[] = [];
         for (let i = 0; i < this.cars.length; i++) {
@@ -83,9 +82,14 @@ class Cars extends React.Component<{}, { make: string, image: string }>{
 
 
     handleChange = (selectedOption: any) => {
-        this.setState({ make: selectedOption.value, image: this.cars[selectedOption.value].image });
+        this.setState({ make: selectedOption.label, image: this.cars[selectedOption.value].image });
         console.log(selectedOption);
     };
+
+    handleButton = (e) => {
+        e.preventDefault();
+        console.log(`Selected ${this.state.make}`)
+    }
 
     render(): React.ReactNode {
         return (
@@ -94,9 +98,17 @@ class Cars extends React.Component<{}, { make: string, image: string }>{
                 </header>
                 <Select options={this.options} onChange={this.handleChange} />
                 <img src={this.state.image} height={200}></img>
+                {this.state.make != undefined && 
+                <div>
+                    <form onSubmit={this.handleButton}>    
+                        <button type='submit'>
+                            Select {this.state.make}
+                        </button>
+                    </form>
+                </div>}
             </div>
         )
     }
 }
 
-export default Cars
+export default ManufacturerSelector
