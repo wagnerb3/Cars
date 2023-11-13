@@ -1,18 +1,12 @@
-import React from 'react';
-import Select from 'react-select'
+import { useState } from "react"
 
-class ManufacturerSelector extends React.Component<{}, { make: string | undefined, image: string | undefined, buttonClicked: boolean }>{
+interface Props {
+    onSubmitButtonHandler: (manufacturer: string) => void;
+}
 
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            make: undefined,
-            image: undefined,
-            buttonClicked: false
-        };
-    }
-    cars = [
-        { make: "Acura", image: "https://1000logos.net/wp-content/uploads/2018/09/Acura-Logo.png" },
+function ManufacturerSelector({onSubmitButtonHandler: onSubmitButton}: Props) {
+    const Cars = [
+        { make: "Acura", image: "https://1000logos.net/wp-content/uploads/2018/09/Acura-Logo.pngAcura.png" },
         { make: "Alfa Romeo", image: "https://medias.fcacanada.ca//specs/alfaromeo/media/images/badge//current-badge_457d965994803bd415fc9735d023d1eb.png" },
         { make: "Aston Martin", image: "https://1000logos.net/wp-content/uploads/2020/02/Aston-Martin-Logo.png" },
         { make: "Audi", image: "https://i.pinimg.com/originals/a6/1f/36/a61f36fab622f8b33f207295b766ca1b.png" },
@@ -67,48 +61,44 @@ class ManufacturerSelector extends React.Component<{}, { make: string | undefine
         { make: "Toyota", image: "https://1000logos.net/wp-content/uploads/2021/04/Toyota-logo.png" },
         { make: "Volkswagen", image: "https://cdn.freebiesupply.com/logos/large/2x/volkswagen-3-logo-png-transparent.png" },
         { make: "Volvo", image: "https://pngimg.com/d/volvo_PNG64.png" }
-    ]
+    ];
 
-    createOptions = () => {
-        let options: { value: number, label: string }[] = [];
-        for (let i = 0; i < this.cars.length; i++) {
-            options.push({ value: i, label: this.cars[i].make })
-        }
-        return options
+    let options = Cars.map((car, index) => (<option key={index} value={car.make}>{car.make}</option>));
+    options.unshift(<option key={-1} value={"Please Select A Manufacturer"}>{"Please Select A Manufacturer"}</option>);
+
+    const [selectedManufacturer, setSelectedManufacturer] = useState("Please Select A Manufacturer");
+    const [selectedImage, setSelectedImage] = useState("");
+
+    const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const car = event.target.value;
+        setSelectedManufacturer(car);
+        setSelectedImage(car === 'Please Select A Manufacturer' ? '' : Cars.filter(c => c.make === car)[0].image);
+    }
+
+    const handleButton = (event: React.FormEvent<HTMLFormElement>) => {
+        console.log(`Selected ${selectedManufacturer}`);
+        onSubmitButton(selectedManufacturer);
     }
 
 
-    options = this.createOptions();
-
-
-    handleChange = (selectedOption: any) => {
-        this.setState({ make: selectedOption.label, image: this.cars[selectedOption.value].image });
-        console.log(selectedOption);
-    };
-
-    handleButton = (e) => {
-        e.preventDefault();
-        console.log(`Selected ${this.state.make}`)
-    }
-
-    render(): React.ReactNode {
-        return (
-            <div className="Cars" >
-                <header className="Cars-header">
-                </header>
-                <Select options={this.options} onChange={this.handleChange} />
-                <img src={this.state.image} height={200}></img>
-                {this.state.make != undefined && 
+    return (
+        <div>
+            <header className="Cars-header" />
+            <select className="form-select" aria-label="Select A Car Manufacturer" onChange={handleChange}>
+                {options}
+            </select>
+            {selectedManufacturer !== "Please Select A Manufacturer" &&
                 <div>
-                    <form onSubmit={this.handleButton}>    
+                    <img src={selectedImage} alt={selectedManufacturer} height={200} />
+                    <form onSubmit={handleButton}>
                         <button type='submit'>
-                            Select {this.state.make}
+                            Select {selectedManufacturer}
                         </button>
                     </form>
                 </div>}
-            </div>
-        )
-    }
+        </div>
+    )
+
 }
 
 export default ManufacturerSelector
