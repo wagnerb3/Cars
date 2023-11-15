@@ -1,26 +1,40 @@
 import { useState } from "react";
-import ManufacturerSelector from "./ManufacturerSelector"
+import MakeSelector from "./MakeSelector"
 import CarTypeSelector from "./CarTypeSelector";
+import { BaseOption, Car, CarType } from "../CarHelper";
+import CarModelSelector from "./CarModelsSelector";
 
 function CarProcess() {
 
     const [currentPage, setPage] = useState(0);
-    const [selectedManufacturer, setSelectedManufacturer] = useState("");
+    const [selectedMake, setSelectedMake] = useState(BaseOption);
+    const [selectedType, setSelectedType] = useState(CarType.NotSet);
 
-    const goToCarTypePage = (manufacturer: string) => {
+    const goToCarTypePage = (manufacturer: Car) => {
         setPage(1);
-        setSelectedManufacturer(manufacturer);
+        setSelectedMake(manufacturer);
     }
 
-    const resetToHome = () => {
+    const goToModelsPage = (carType: CarType) => {
+        setPage(2);
+        setSelectedType(carType)
+    }
+
+    const goToHomePage = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
         setPage(0);
-        setSelectedManufacturer("");
+    }
+
+    const goToSelectTypePage = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setPage(1);
     }
 
     return (
         <div>
-            {currentPage === 0 && <ManufacturerSelector onSubmitButtonHandler={goToCarTypePage}></ManufacturerSelector>}
-            {currentPage === 1 && <CarTypeSelector manufacturer={selectedManufacturer} backPageButtonHandler={resetToHome}></CarTypeSelector>}
+            {currentPage === 0 && <MakeSelector make={selectedMake} onSubmitButtonHandler={goToCarTypePage} />}
+            {currentPage === 1 && <CarTypeSelector make={selectedMake} selectCarTypeButtonHandler={goToModelsPage} backPageButtonHandler={goToHomePage} />}
+            {currentPage === 2 && <CarModelSelector carType={selectedType} backPageButtonHandler={goToSelectTypePage}/>}
         </div>
     )
 }
