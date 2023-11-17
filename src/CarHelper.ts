@@ -137,5 +137,5 @@ export const Makes: [{ make: string, image: string, types: CarType[], models: Mo
     { make: "Tesla", image: TeslaImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Toyota", image: ToyotaImage, types: [CarType.Sedan, CarType.SUV, CarType.Minivan, CarType.Truck], models: [] },
     { make: "Volkswagen", image: VolkswagenImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Volvo", image: VolvoImage, types: [CarType.Sedan, CarType.SUV], models: [] },
+    { make: "Volvo", image: VolvoImage, types: [CarType.Sedan, CarType.SUV], models: [] }
 ];
