@@ -131,9 +131,216 @@ export const Makes: [{ make: string, image: string, types: CarType[], models: Mo
             }
         ]
     },
-    { make: "Aston Martin", image: AstonMartinImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Audi", image: AudiImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "BMW", image: BentleyImage, types: [CarType.Sedan, CarType.SUV], models: [] },
+    {
+        make: "Aston Martin",
+        image: AstonMartinImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "DB12",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "DBS",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Vantage",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Valour",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Valkyrie",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Valhalla",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "DBX",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Audi",
+        image: AudiImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "A3",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "A4",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "A5",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "A6",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "A7",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "A8",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "TT",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "R8",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Q3",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Q4",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Q5",
+                type: CarType.SUV,
+                image: ""
+            },
+        ]
+    },
+    { 
+        make: "BMW", 
+        image: BentleyImage, 
+        types: [CarType.Sedan, CarType.SUV], 
+        models: [
+            {
+                name: "2",
+                type: CarType.Sedan,
+                image: ""
+        },
+        {
+            name: "3",
+            type: CarType.Sedan,
+            image: ""
+        },
+        {
+            name: "4",
+            type: CarType.Sedan,
+            image: ""
+        },
+        {
+            name: "5",
+            type: CarType.Sedan,
+            image: ""
+        },
+        {
+            name: "7",
+            type: CarType.Sedan,
+            image: ""
+        },
+        {
+            name: "8",
+            type: CarType.Sedan,
+            image: ""
+        },
+        {
+            name: "M3",
+            type: CarType.Sedan,
+            image: ""
+        },
+        {
+            name: "M8",
+            type: CarType.Sedan,
+            image: ""
+        },
+        {
+            name: "i4",
+            type: CarType.Sedan,
+            image: ""
+        },
+        {
+            name: "i5",
+            type: CarType.Sedan,
+            image: ""
+        },
+        {
+            name: "i7",
+            type: CarType.Sedan,
+            image: ""
+        },
+        {
+            name: "X1",
+            type: CarType.SUV,
+            image: ""
+        },
+        {
+            name: "X2",
+            type: CarType.SUV,
+            image: ""
+        },
+        {
+            name: "X3",
+            type: CarType.SUV,
+            image: ""
+        },
+        {
+            name: "X4",
+            type: CarType.SUV,
+            image: ""
+        },
+        {
+            name: "X5",
+            type: CarType.SUV,
+            image: ""
+        },
+        {
+            name: "X6",
+            type: CarType.SUV,
+            image: ""
+        },
+        {
+            name: "X7",
+            type: CarType.SUV,
+            image: ""
+        },
+        {
+            name: "iX",
+            type: CarType.SUV,
+            image: ""
+        },
+        {
+            name: "XM",
+            type: CarType.SUV,
+            image: ""
+        }
+        ] },
     { make: "Bentley", image: BMWImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Bugatti", image: BugattiImage, types: [CarType.Sedan], models: [] },
     { make: "Buick", image: BuickImage, types: [CarType.Sedan, CarType.SUV], models: [] },
