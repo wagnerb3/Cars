@@ -16,21 +16,26 @@ function CarTypeSelector({ make, selectCarTypeButtonHandler, backPageButtonHandl
     const buttons = make.types.map((type, index) => <button type="button" className="btn btn-secondary" value={CarType[type]} key={index} onClick={(e) => handleSelectCarType(CarType[type])}>{CarType[type]}</button>)
 
     return (
-        <div>
-            <h1>{make.make}</h1>
-            <div>
-                <div className="btn-group" role="group" aria-label="Basic example">
+        <>
+            <h1 className="center">
+                {make.make}
+            </h1>
+            <div className="center">
+                <div className="center image">
+                    <img className="image" src={make.image} alt={make.make} height={200} />
+                </div>
+                <div className="btn-group center block" role="group" aria-label="Basic example">
                     {buttons}
                 </div>
             </div>
             <div>
-                <form onSubmit={(e) => backPageButtonHandler(e)}>
+                <form className="center" onSubmit={(e) => backPageButtonHandler(e)}>
                     <button className="btn btn-danger" type='submit'>
                         Back
                     </button>
                 </form>
             </div>
-        </div>
+        </>
     );
 }
 

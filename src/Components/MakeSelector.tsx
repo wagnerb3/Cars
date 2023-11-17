@@ -27,21 +27,26 @@ function MakeSelector({ make, onSubmitButtonHandler }: Props) {
 
 
     return (
-        <div>
-            <header className="Cars-header" />
-            <select className="form-select" aria-label="Select A Car Manufacturer" onChange={handleChange}>
+        <>
+            <select className="center form-select" aria-label="Select A Car Manufacturer" onChange={handleChange}>
                 {options}
             </select>
             {selectedMake.make !== "Please Select A Manufacturer" &&
-                <div>
-                    <img src={selectedMake.image} alt={selectedMake.make} height={200} />
-                    <form onSubmit={handleButton}>
-                        <button className="btn btn-primary" type='submit'>
-                            Select {selectedMake.make}
-                        </button>
-                    </form>
+                <div className="center">
+                    <div className="center">
+                        <div className="center image">
+                            <img className="image" src={selectedMake.image} alt={selectedMake.make} height={200} />
+                        </div>
+                        <div className="center block">
+                            <form onSubmit={handleButton}>
+                                <button className="btn btn-primary" type='submit'>
+                                    Select {selectedMake.make}
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>}
-        </div>
+        </>
     )
 
 }
