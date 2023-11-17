@@ -9,7 +9,6 @@ import BuickImage from './Images/Logos/Buick.png';
 import CadillacImage from './Images/Logos/Cadillac.png';
 import ChevroletImage from './Images/Logos/Chevrolet.png';
 import ChryslerImage from './Images/Logos/Chrysler.png';
-import DeLoreanImage from './Images/Logos/DeLorean.png';
 import DodgeImage from './Images/Logos/Dodge.png';
 import FerrariImage from './Images/Logos/Ferrari.png';
 import FiatImage from './Images/Logos/Fiat.png';
@@ -59,6 +58,7 @@ export enum CarType {
     Sedan = 'Sedan',
     SUV = 'SUV',
     Minivan = 'Minivan',
+    Van = 'Van',
     Truck = 'Truck'
 }
 
@@ -555,13 +555,207 @@ export const Makes: [{ make: string, image: string, types: CarType[], models: Mo
             }
         ]
     },
-    { make: "DeLorean", image: DeLoreanImage, types: [CarType.Sedan], models: [] },
-    { make: "Dodge", image: DodgeImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Ferrari", image: FerrariImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Fiat", image: FiatImage, types: [CarType.Sedan], models: [] },
-    { make: "Ford", image: FordImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
-    { make: "GMC", image: GenesisImage, types: [CarType.Sedan], models: [] },
-    { make: "Genesis", image: GMCImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
+    {
+        make: "Dodge",
+        image: DodgeImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Challenger",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Charger",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Durango",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Hornet",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Ferrari",
+        image: FerrariImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Daytona SP3",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Enzo",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "F40",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "F50",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "GTO",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "LaFerrari",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Monza",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Portofino M",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Roma",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "SF90",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "296",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "812",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Purosangue",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Fiat",
+        image: FiatImage,
+        types: [CarType.Sedan],
+        models: [
+            {
+                name: "500X",
+                type: CarType.Sedan,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Ford",
+        image: FordImage,
+        types: [CarType.Sedan, CarType.SUV, CarType.Van, CarType.Truck],
+        models: [
+            {
+                name: "Mustang",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Bronco",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Edge",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Expedition",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Explorer",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Escape",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Mustang Mach-E",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Transit",
+                type: CarType.Van,
+                image: ""
+            },
+            {
+                name: "F-150",
+                type: CarType.Truck,
+                image: ""
+            },
+            {
+                name: "F-250",
+                type: CarType.Truck,
+                image: ""
+            },
+            {
+                name: "F-350",
+                type: CarType.Truck,
+                image: ""
+            },
+            {
+                name: "F-450",
+                type: CarType.Truck,
+                image: ""
+            },
+            {
+                name: "Maverick",
+                type: CarType.Truck,
+                image: ""
+            },
+            {
+                name: "Ranger",
+                type: CarType.Truck,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Genesis",
+        image: GenesisImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: ""
+                type: CarType.Sedan,
+                image: ""
+            }
+        ]
+    },
+    { make: "GMC", image: GMCImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
     { make: "Honda", image: HondaImage, types: [CarType.Sedan, CarType.SUV, CarType.Minivan, CarType.Truck], models: [] },
     { make: "Hummer", image: HummerImage, types: [CarType.SUV], models: [] },
     { make: "Hyundai", image: HyundaiImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
