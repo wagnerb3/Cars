@@ -13,7 +13,7 @@ function CarTypeSelector({ make, selectCarTypeButtonHandler, backPageButtonHandl
         console.log(`Selected ${type}`);
     }
 
-    const buttons = make.types.map((type, index) => <button type="button" className="btn btn-primary" value={CarType[type]} key={index} onClick={(e) => handleSelectCarType(CarType[type])}>{CarType[type]}</button>)
+    const buttons = make.types.map((type, index) => <button type="button" className="btn btn-secondary" value={CarType[type]} key={index} onClick={(e) => handleSelectCarType(CarType[type])}>{CarType[type]}</button>)
 
     return (
         <div>
@@ -25,7 +25,7 @@ function CarTypeSelector({ make, selectCarTypeButtonHandler, backPageButtonHandl
             </div>
             <div>
                 <form onSubmit={(e) => backPageButtonHandler(e)}>
-                    <button type='submit'>
+                    <button className="btn btn-danger" type='submit'>
                         Back
                     </button>
                 </form>

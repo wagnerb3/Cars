@@ -82,13 +82,13 @@ export const BaseOption: Car = {
     models: []
 }
 
-export const Makes: [{ make: string, image: string, types: CarType[], models: Model[] }] = [
+export const Makes = [
     { make: "Acura", image: AcuraImage, types: [CarType.Sedan, CarType.SUV], models: [{ name: "Integra", type: CarType.Sedan, image: "" }, { name: "TLX", type: CarType.Sedan, image: "" }, { name: "RDX", type: CarType.SUV, image: "" }, { name: "MDX", type: CarType.SUV, image: "" }] },
     { make: "Alfa Romeo", image: AlfaRomeoImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Aston Martin", image: AstonMartinImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Audi", image: AudiImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "BMW", image: BentleyImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Bentley", image: BMWImage, types: [CarType.Sedan, CarType.SUV], models: [] },
+    { make: "BMW", image: BMWImage, types: [CarType.Sedan, CarType.SUV], models: [] },
+    { make: "Bentley", image: BentleyImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Bugatti", image: BugattiImage, types: [CarType.Sedan], models: [] },
     { make: "Buick", image: BuickImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Cadillac", image: CadillacImage, types: [CarType.Sedan, CarType.SUV], models: [] },

@@ -36,7 +36,7 @@ function MakeSelector({ make, onSubmitButtonHandler }: Props) {
                 <div>
                     <img src={selectedMake.image} alt={selectedMake.make} height={200} />
                     <form onSubmit={handleButton}>
-                        <button type='submit'>
+                        <button className="btn btn-primary" type='submit'>
                             Select {selectedMake.make}
                         </button>
                     </form>
