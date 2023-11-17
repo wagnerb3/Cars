@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Cars/static/css/main.e6c13ad2.css",
-    "main.js": "/Cars/static/js/main.34b7e8e5.js",
+    "main.css": "/Cars/static/css/main.f5c564f2.css",
+    "main.js": "/Cars/static/js/main.5f6c3a10.js",
     "static/js/787.1b4f38da.chunk.js": "/Cars/static/js/787.1b4f38da.chunk.js",
     "static/media/Lamborghini.png": "/Cars/static/media/Lamborghini.2e3644070962fd4d79a0.png",
     "static/media/Nissan.png": "/Cars/static/media/Nissan.3024657c1f77296778ef.png",
@@ -18,9 +18,9 @@
     "static/media/Saab.png": "/Cars/static/media/Saab.96bf3bdb5169a8d81322.png",
     "static/media/Lotus.png": "/Cars/static/media/Lotus.e5ca315617c74be3a4ee.png",
     "static/media/Ford.png": "/Cars/static/media/Ford.bdaa0e9e33360d85e41e.png",
+    "static/media/Buick.png": "/Cars/static/media/Buick.372ba2008d01d429d87c.png",
     "static/media/AlfaRomeo.png": "/Cars/static/media/AlfaRomeo.af26c1f5eed75d49b004.png",
     "static/media/Bugatti.png": "/Cars/static/media/Bugatti.86ef7cd9c9584628448b.png",
-    "static/media/Buick.png": "/Cars/static/media/Buick.bc9ffdd315c1a0c4faf1.png",
     "static/media/Mercedes.png": "/Cars/static/media/Mercedes.558eb7b845b7ddf70cc8.png",
     "static/media/LandRover.png": "/Cars/static/media/LandRover.b17ccc8b724585980c5c.png",
     "static/media/Bentley.png": "/Cars/static/media/Bentley.062b778152e3a16f5890.png",
@@ -49,20 +49,21 @@
     "static/media/Dodge.png": "/Cars/static/media/Dodge.6052432ed51c80cb192d.png",
     "static/media/Audi.png": "/Cars/static/media/Audi.b78964020d27e313f581.png",
     "static/media/Ferrari.png": "/Cars/static/media/Ferrari.c8fcd33a1a09ddad0c9b.png",
+    "static/media/DeLorean.png": "/Cars/static/media/DeLorean.9610809cc297764e5c15.png",
     "static/media/Rivian.png": "/Cars/static/media/Rivian.041223cc1800bce1ca0d.png",
     "static/media/Lincoln.png": "/Cars/static/media/Lincoln.89f629a323d851300108.png",
     "static/media/Smart.png": "/Cars/static/media/Smart.a1342123d27611c18801.png",
+    "static/media/Kia.png": "/Cars/static/media/Kia.c3d6f78234cff742b7cc.png",
     "static/media/Polestar.png": "/Cars/static/media/Polestar.89e52376632485818d1f.png",
     "static/media/Infiniti.png": "/Cars/static/media/Infiniti.6ea3d2a9026965b7c3b7.png",
     "static/media/Acura.png": "/Cars/static/media/Acura.166b2773d0ec63254dc8.png",
-    "static/media/DeLorean.png": "/Cars/static/media/DeLorean.1aba6a5292f750637929.png",
     "index.html": "/Cars/index.html",
-    "main.e6c13ad2.css.map": "/Cars/static/css/main.e6c13ad2.css.map",
-    "main.34b7e8e5.js.map": "/Cars/static/js/main.34b7e8e5.js.map",
+    "main.f5c564f2.css.map": "/Cars/static/css/main.f5c564f2.css.map",
+    "main.5f6c3a10.js.map": "/Cars/static/js/main.5f6c3a10.js.map",
     "787.1b4f38da.chunk.js.map": "/Cars/static/js/787.1b4f38da.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.34b7e8e5.js"
+    "static/css/main.f5c564f2.css",
+    "static/js/main.5f6c3a10.js"
   ]
 }
