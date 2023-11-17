@@ -107,7 +107,8 @@ export const Makes: [{ make: string, image: string, types: CarType[], models: Mo
                 name: "RDX",
                 type: CarType.SUV,
                 image: ""
-            }]
+            }
+        ]
     },
     {
         make: "Alfa Romeo",
