@@ -9,7 +9,6 @@ import BuickImage from './Images/Logos/Buick.png';
 import CadillacImage from './Images/Logos/Cadillac.png';
 import ChevroletImage from './Images/Logos/Chevrolet.png';
 import ChryslerImage from './Images/Logos/Chrysler.png';
-import DeLoreanImage from './Images/Logos/DeLorean.png';
 import DodgeImage from './Images/Logos/Dodge.png';
 import FerrariImage from './Images/Logos/Ferrari.png';
 import FiatImage from './Images/Logos/Fiat.png';
@@ -555,7 +554,6 @@ export const Makes = [
             }
         ]
     },
-    { make: "DeLorean", image: DeLoreanImage, types: [CarType.Sedan], models: [] },
     { make: "Dodge", image: DodgeImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Ferrari", image: FerrariImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Fiat", image: FiatImage, types: [CarType.Sedan], models: [] },
