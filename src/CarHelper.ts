@@ -82,13 +82,13 @@ export const BaseOption: Car = {
     models: []
 }
 
-export const Makes: [{ make: string, image: string, types: CarType[], models: Model[] }] = [
+export const Makes = [
     { make: "Acura", image: AcuraImage, types: [CarType.Sedan, CarType.SUV], models: [{ name: "Integra", type: CarType.Sedan, image: "" }, { name: "TLX", type: CarType.Sedan, image: "" }, { name: "RDX", type: CarType.SUV, image: "" }, { name: "MDX", type: CarType.SUV, image: "" }] },
     { make: "Alfa Romeo", image: AlfaRomeoImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Aston Martin", image: AstonMartinImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Audi", image: AudiImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "BMW", image: BentleyImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Bentley", image: BMWImage, types: [CarType.Sedan, CarType.SUV], models: [] },
+    { make: "BMW", image: BMWImage, types: [CarType.Sedan, CarType.SUV], models: [] },
+    { make: "Bentley", image: BentleyImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Bugatti", image: BugattiImage, types: [CarType.Sedan], models: [] },
     { make: "Buick", image: BuickImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Cadillac", image: CadillacImage, types: [CarType.Sedan, CarType.SUV], models: [] },
@@ -99,8 +99,8 @@ export const Makes: [{ make: string, image: string, types: CarType[], models: Mo
     { make: "Ferrari", image: FerrariImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Fiat", image: FiatImage, types: [CarType.Sedan], models: [] },
     { make: "Ford", image: FordImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
-    { make: "GMC", image: GenesisImage, types: [CarType.Sedan], models: [] },
-    { make: "Genesis", image: GMCImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
+    { make: "Genesis", image: GenesisImage, types: [CarType.Sedan], models: [] },
+    { make: "GMC", image: GMCImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
     { make: "Honda", image: HondaImage, types: [CarType.Sedan, CarType.SUV, CarType.Minivan, CarType.Truck], models: [] },
     { make: "Hummer", image: HummerImage, types: [CarType.SUV], models: [] },
     { make: "Hyundai", image: HyundaiImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
