@@ -21,7 +21,7 @@ function CarTypeSelector({ make, selectCarTypeButtonHandler, backPageButtonHandl
                 {make.make}
             </h1>
             <div className="center">
-                <div className="center image">
+                <div className="center block">
                     <img className="image" src={make.image} alt={make.make} height={200} />
                 </div>
                 <div className="btn-group center block" role="group" aria-label="Basic example">
