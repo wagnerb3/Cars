@@ -7,16 +7,18 @@ interface Props {
 
 function CarModelSelector({ carType, backPageButtonHandler }: Props) {
     return (
-        <div>
-            <h1>{carType}</h1>
+        <>
+            <h1 className="center">
+                {carType}
+            </h1>
             <div>
-                <form onSubmit={(e) => backPageButtonHandler(e)}>
-                    <button type='submit'>
+                <form className="center" onSubmit={(e) => backPageButtonHandler(e)}>
+                    <button className="btn btn-danger" type='submit'>
                         Back
                     </button>
                 </form>
             </div>
-        </div>
+        </>
     );
 }
 
