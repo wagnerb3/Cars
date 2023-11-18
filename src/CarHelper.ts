@@ -237,6 +237,33 @@ export const Makes = [
         ]
     },
     {
+        make: "Bentley",
+        image: BentleyImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Continental GT Range",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Flying Spur Range",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Mulliner",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Bentayga Range",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
         make: "BMW",
         image: BMWImage,
         types: [CarType.Sedan, CarType.SUV],
@@ -338,33 +365,6 @@ export const Makes = [
             },
             {
                 name: "XM",
-                type: CarType.SUV,
-                image: ""
-            }
-        ]
-    },
-    {
-        make: "Bentley",
-        image: BentleyImage,
-        types: [CarType.Sedan, CarType.SUV],
-        models: [
-            {
-                name: "Continental GT Range",
-                type: CarType.Sedan,
-                image: ""
-            },
-            {
-                name: "Flying Spur Range",
-                type: CarType.Sedan,
-                image: ""
-            },
-            {
-                name: "Mulliner",
-                type: CarType.Sedan,
-                image: ""
-            },
-            {
-                name: "Bentayga Range",
                 type: CarType.SUV,
                 image: ""
             }
