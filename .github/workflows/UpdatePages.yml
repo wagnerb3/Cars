@@ -1,4 +1,5 @@
 name: Update-Pages-Site
+run-name: Deploy to Pages
 on:
   push:
     branches:
@@ -7,10 +8,10 @@ jobs:
   Update-Github-Pages:
     runs-on: ubuntu-latest
     steps:
+      - name: Deploy
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
-      - name: Deploy
-      - run: |
+        run: |
           git config --global user.email 'github-actions@github.com'
           git config --global user.name 'github-actions'
           git remote set-url origin https://${{ secrets.PAT }}@github.com/username/repository.git
