@@ -16,7 +16,6 @@ import FordImage from './Images/Logos/Ford.png';
 import GenesisImage from './Images/Logos/Genesis.png';
 import GMCImage from './Images/Logos/GMC.png';
 import HondaImage from './Images/Logos/Honda.png';
-import HummerImage from './Images/Logos/Hummer.png';
 import HyundaiImage from './Images/Logos/Hyundai.png';
 import InfinitiImage from './Images/Logos/Infiniti.png';
 import JaguarImage from './Images/Logos/Jaguar.png';
@@ -29,9 +28,7 @@ import LincolnImage from './Images/Logos/Lincoln.png';
 import LotusImage from './Images/Logos/Lotus.png';
 import MaseratiImage from './Images/Logos/Maserati.png';
 import MazdaImage from './Images/Logos/Mazda.png';
-import McLarenImage from './Images/Logos/McLaren.png';
 import MercedesImage from './Images/Logos/Mercedes.png';
-import MercuryImage from './Images/Logos/Mercury.png';
 import MiniImage from './Images/Logos/Mini.png';
 import MitsubishiImage from './Images/Logos/Mitsubishi.png';
 import NissanImage from './Images/Logos/Nissan.png';
@@ -749,33 +746,868 @@ export const Makes: [{ make: string, image: string, types: CarType[], models: Mo
         types: [CarType.Sedan, CarType.SUV],
         models: [
             {
-                name: ""
+                name: "G70",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "G80",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "G90",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "G70",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "G80",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "G90",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "GMC",
+        image: GMCImage,
+        types: [CarType.SUV, CarType.Van, CarType.Truck],
+        models: [
+            {
+                name: "Acadia",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Hummer EV SUV",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Terrain",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Yukon",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Savana",
+                type: CarType.Van,
+                image: ""
+            },
+            {
+                name: "Canyon",
+                type: CarType.Truck,
+                image: ""
+            },
+            {
+                name: "Hummer EV Pickup",
+                type: CarType.Truck,
+                image: ""
+            },
+            {
+                name: "Sierra 1500",
+                type: CarType.Truck,
+                image: ""
+            },
+            {
+                name: "Sierra HD",
+                type: CarType.Truck,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Honda",
+        image: HondaImage,
+        types: [CarType.Sedan, CarType.SUV, CarType.Minivan, CarType.Truck],
+        models: [
+            {
+                name: "Accord",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Civic",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "HR-V",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "CR-V",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Passport",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Pilot",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Odyssey",
+                type: CarType.Minivan,
+                image: ""
+            },
+            {
+                name: "Ridgeline",
+                type: CarType.Truck,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Hyundai",
+        image: HyundaiImage,
+        types: [CarType.Sedan, CarType.SUV, CarType.Truck],
+        models: [
+            {
+                name: "Elantra",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Ioniq 6",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Sonata",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Ioniq 5",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Kona",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Nexo Fuel Cell",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Palisade",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Santa Cruz",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Tucson",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Venue",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Santa Fe",
+                type: CarType.Truck,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Infiniti",
+        image: InfinitiImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Q50",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Q60",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "QX50",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "QX55",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "QX60",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "QX80",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Jaguar",
+        image: JaguarImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "F-Type",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "XF",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "E-Pace",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "F-Pace",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "I-Pace",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Jeep",
+        image: JeepImage,
+        types: [CarType.SUV, CarType.Truck],
+        models: [
+            {
+                name: "Cherokee",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Compass",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Grand Cherokee",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Grand Wagoneer",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Renegade",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Wagoneer",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Wrangler",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Gladiator",
+                type: CarType.Truck,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Kia",
+        image: KiaImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Forte",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "K5",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Rio",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Stinger",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Carnival MPV",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "EV9",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Niro",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Seltos",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Sorento",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Soul",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Sportage",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Telluride",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Lamborghini",
+        image: LamborghiniImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Countach LPI 800-4",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Huracan",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Revuelto",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Sian",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Urus",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Land Rover",
+        image: LandRoverImage,
+        types: [CarType.SUV],
+        models: [
+            {
+                name: "Defender",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Discovery",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Range Rover",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Lexus",
+        image: LexusImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "ES",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "IS",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "LS",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "LC",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "RC",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "GX",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "LX",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "NX",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "RX",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "RZ",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "TX",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "UX",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Lincoln",
+        image: LincolnImage,
+        types: [CarType.SUV],
+        models: [
+            {
+                name: "Aviator",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Corsair",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Nautilus",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Navigator",
+                type: CarType.SUV,
+                image: ""
+            },
+        ]
+    },
+    {
+        make: "Lotus",
+        image: LotusImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Emeya",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Emira",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Evija",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Eletre",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Maserati",
+        image: MaseratiImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Ghibli",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "GranTurismo",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "MC20",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Quattroporte",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Grecale",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Levante",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Mazda",
+        image: MazdaImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Mazda 3",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "MX-5 Miata",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "CX-5",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "CX-30",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "CX-50",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "CX-90",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Mercedes",
+        image: MercedesImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "A-Class",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "C-Class",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "CLA",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "CLE",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "CLS",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "E-Class",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "EQE",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "EQS",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "GT",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Haute Voiture",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "S-Class",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "SL Roadster",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "EQB",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "EQE",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "EQS",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "G-Class",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "GLA",
+                type: CarType.SUV,
+                image: ""
+            }
+            {
+                name: "GLB",
+                type: CarType.SUV,
+                image: ""
+            }
+            {
+                name: "GLC",
+                type: CarType.SUV,
+                image: ""
+            }
+            {
+                name: "GLE",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Mini",
+        image: MiniImage,
+        types: [CarType.Sedan],
+        models: [
+            {
+                name: "Clubman",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Convertible",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Countryman",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Hardtop",
                 type: CarType.Sedan,
                 image: ""
             }
         ]
     },
-    { make: "GMC", image: GMCImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
-    { make: "Honda", image: HondaImage, types: [CarType.Sedan, CarType.SUV, CarType.Minivan, CarType.Truck], models: [] },
-    { make: "Hummer", image: HummerImage, types: [CarType.SUV], models: [] },
-    { make: "Hyundai", image: HyundaiImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
-    { make: "Infiniti", image: InfinitiImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Jaguar", image: JaguarImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Jeep", image: JeepImage, types: [CarType.SUV, CarType.Truck], models: [] },
-    { make: "Kia", image: KiaImage, types: [CarType.Sedan, CarType.SUV, CarType.Minivan], models: [] },
-    { make: "Lamborghini", image: LamborghiniImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Land Rover", image: LandRoverImage, types: [CarType.SUV], models: [] },
-    { make: "Lexus", image: LexusImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Lincoln", image: LincolnImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Lotus", image: LotusImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Maserati", image: MaseratiImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Mazda", image: MazdaImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "McLaren", image: McLarenImage, types: [CarType.Sedan], models: [] },
-    { make: "Mercedes", image: MercedesImage, types: [CarType.Sedan, CarType.SUV], models: [] },
-    { make: "Mercury", image: MercuryImage, types: [CarType.Sedan, CarType.SUV, CarType.Minivan], models: [] },
-    { make: "Mini", image: MiniImage, types: [CarType.Sedan], models: [] },
-    { make: "Mitsubishi", image: MitsubishiImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
-    { make: "Nissan", image: NissanImage, types: [CarType.Sedan, CarType.SUV, CarType.Truck], models: [] },
+    {
+        make: "Mitsubishi",
+        image: MitsubishiImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Mirage",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Eclipse Cross",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Outlander",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "Nissan",
+        image: NissanImage,
+        types: [CarType.Sedan, CarType.SUV, CarType.Truck],
+        models: [
+            {
+                name: "Altima",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "GT-R",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Leaf",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Maxima",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Sentra",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Versa",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Z",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Ariya",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Armada",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Kicks",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Murano",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Pathfinder",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Rogue",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "Frontier",
+                type: CarType.Truck,
+                image: ""
+            },
+            {
+                name: "Titan",
+                type: CarType.Truck,
+                image: ""
+            }
+        ]
+    },
     { make: "Oldsmobile", image: OldsmobileImage, types: [CarType.Sedan, CarType.SUV, CarType.Minivan], models: [] },
     { make: "Polestar", image: PolestarImage, types: [CarType.Sedan, CarType.SUV], models: [] },
     { make: "Pontiac", image: PontiacImage, types: [CarType.Sedan, CarType.SUV, CarType.Minivan], models: [] },
