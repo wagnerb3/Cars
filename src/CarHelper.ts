@@ -1,3 +1,4 @@
+import { CarType } from './CarType';
 import AcuraImage from './Images/Logos/Acura.png';
 import AlfaRomeoImage from './Images/Logos/AlfaRomeo.png';
 import AstonMartinImage from './Images/Logos/AstonMartin.png';
@@ -43,15 +44,6 @@ import ToyotaImage from './Images/Logos/Toyota.png';
 import VolkswagenImage from './Images/Logos/Volkswagen.png';
 import VolvoImage from './Images/Logos/Volvo.png';
 
-export enum CarType {
-    NotSet = 'NotSet',
-    Sedan = 'Sedan',
-    SUV = 'SUV',
-    Minivan = 'Minivan',
-    Van = 'Van',
-    Truck = 'Truck'
-}
-
 export interface Model {
     name: string,
     type: CarType,
@@ -61,14 +53,12 @@ export interface Model {
 export interface Car {
     make: string;
     image: string;
-    types: CarType[];
     models: Model[];
 }
 
 export const BaseOption: Car = {
     make: "Please Select A Manufacturer",
     image: "",
-    types: [],
     models: []
 }
 
@@ -76,7 +66,6 @@ export const Makes = [
     {
         make: "Acura",
         image: AcuraImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Integra",
@@ -103,7 +92,6 @@ export const Makes = [
     {
         make: "Alfa Romeo",
         image: AlfaRomeoImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Giulia",
@@ -125,7 +113,6 @@ export const Makes = [
     {
         make: "Aston Martin",
         image: AstonMartinImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "DB12",
@@ -167,7 +154,6 @@ export const Makes = [
     {
         make: "Audi",
         image: AudiImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "A3",
@@ -229,7 +215,6 @@ export const Makes = [
     {
         make: "Bentley",
         image: BentleyImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Continental GT Range",
@@ -256,7 +241,6 @@ export const Makes = [
     {
         make: "BMW",
         image: BMWImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "2",
@@ -363,7 +347,6 @@ export const Makes = [
     {
         make: "Bugatti",
         image: BugattiImage,
-        types: [CarType.Sedan],
         models: [
             {
                 name: "Bolide",
@@ -400,7 +383,6 @@ export const Makes = [
     {
         make: "Buick",
         image: BuickImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Enclave",
@@ -427,7 +409,6 @@ export const Makes = [
     {
         make: "Cadillac",
         image: CadillacImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "CT4",
@@ -469,7 +450,6 @@ export const Makes = [
     {
         make: "Chevrolet",
         image: ChevroletImage,
-        types: [CarType.Sedan, CarType.SUV, CarType.Truck],
         models: [
             {
                 name: "Malibu",
@@ -531,7 +511,6 @@ export const Makes = [
     {
         make: "Chrysler",
         image: ChryslerImage,
-        types: [CarType.Sedan, CarType.Minivan],
         models: [
             {
                 name: "300",
@@ -548,7 +527,6 @@ export const Makes = [
     {
         make: "Dodge",
         image: DodgeImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Challenger",
@@ -575,7 +553,6 @@ export const Makes = [
     {
         make: "Ferrari",
         image: FerrariImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Daytona SP3",
@@ -647,7 +624,6 @@ export const Makes = [
     {
         make: "Fiat",
         image: FiatImage,
-        types: [CarType.Sedan],
         models: [
             {
                 name: "500X",
@@ -659,7 +635,6 @@ export const Makes = [
     {
         make: "Ford",
         image: FordImage,
-        types: [CarType.Sedan, CarType.SUV, CarType.Van, CarType.Truck],
         models: [
             {
                 name: "Mustang",
@@ -736,7 +711,6 @@ export const Makes = [
     {
         make: "Genesis",
         image: GenesisImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "G70",
@@ -773,7 +747,6 @@ export const Makes = [
     {
         make: "GMC",
         image: GMCImage,
-        types: [CarType.SUV, CarType.Van, CarType.Truck],
         models: [
             {
                 name: "Acadia",
@@ -825,7 +798,6 @@ export const Makes = [
     {
         make: "Honda",
         image: HondaImage,
-        types: [CarType.Sedan, CarType.SUV, CarType.Minivan, CarType.Truck],
         models: [
             {
                 name: "Accord",
@@ -872,7 +844,6 @@ export const Makes = [
     {
         make: "Hyundai",
         image: HyundaiImage,
-        types: [CarType.Sedan, CarType.SUV, CarType.Truck],
         models: [
             {
                 name: "Elantra",
@@ -934,7 +905,6 @@ export const Makes = [
     {
         make: "Infiniti",
         image: InfinitiImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Q50",
@@ -971,7 +941,6 @@ export const Makes = [
     {
         make: "Jaguar",
         image: JaguarImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "F-Type",
@@ -1003,7 +972,6 @@ export const Makes = [
     {
         make: "Jeep",
         image: JeepImage,
-        types: [CarType.SUV, CarType.Truck],
         models: [
             {
                 name: "Cherokee",
@@ -1050,7 +1018,6 @@ export const Makes = [
     {
         make: "Kia",
         image: KiaImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Forte",
@@ -1117,7 +1084,6 @@ export const Makes = [
     {
         make: "Lamborghini",
         image: LamborghiniImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Countach LPI 800-4",
@@ -1149,7 +1115,6 @@ export const Makes = [
     {
         make: "Land Rover",
         image: LandRoverImage,
-        types: [CarType.SUV],
         models: [
             {
                 name: "Defender",
@@ -1171,7 +1136,6 @@ export const Makes = [
     {
         make: "Lexus",
         image: LexusImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "ES",
@@ -1238,7 +1202,6 @@ export const Makes = [
     {
         make: "Lincoln",
         image: LincolnImage,
-        types: [CarType.SUV],
         models: [
             {
                 name: "Aviator",
@@ -1265,7 +1228,6 @@ export const Makes = [
     {
         make: "Lotus",
         image: LotusImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Emeya",
@@ -1292,7 +1254,6 @@ export const Makes = [
     {
         make: "Maserati",
         image: MaseratiImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Ghibli",
@@ -1329,7 +1290,6 @@ export const Makes = [
     {
         make: "Mazda",
         image: MazdaImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Mazda 3",
@@ -1366,7 +1326,6 @@ export const Makes = [
     {
         make: "Mercedes",
         image: MercedesImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "A-Class",
@@ -1473,7 +1432,6 @@ export const Makes = [
     {
         make: "Mini",
         image: MiniImage,
-        types: [CarType.Sedan],
         models: [
             {
                 name: "Clubman",
@@ -1500,7 +1458,6 @@ export const Makes = [
     {
         make: "Mitsubishi",
         image: MitsubishiImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Mirage",
@@ -1522,7 +1479,6 @@ export const Makes = [
     {
         make: "Nissan",
         image: NissanImage,
-        types: [CarType.Sedan, CarType.SUV, CarType.Truck],
         models: [
             {
                 name: "Altima",
@@ -1604,7 +1560,6 @@ export const Makes = [
     {
         make: "Polestar",
         image: PolestarImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "2",
@@ -1621,7 +1576,6 @@ export const Makes = [
     {
         make: "Porsche",
         image: PorscheImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "718",
@@ -1658,7 +1612,6 @@ export const Makes = [
     {
         make: "Ram",
         image: RamImage,
-        types: [CarType.Truck],
         models: [
             {
                 name: "1500",
@@ -1680,7 +1633,6 @@ export const Makes = [
     {
         make: "Rivian",
         image: RivianImage,
-        types: [CarType.SUV, CarType.Truck],
         models: [
             {
                 name: "R1S",
@@ -1697,7 +1649,6 @@ export const Makes = [
     {
         make: "Rolls-Royce",
         image: RollsRoyceImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Black Badge",
@@ -1729,7 +1680,6 @@ export const Makes = [
     {
         make: "Subaru",
         image: SubaruImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "BRZ",
@@ -1781,7 +1731,6 @@ export const Makes = [
     {
         make: "Tesla",
         image: TeslaImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "Model S",
@@ -1808,7 +1757,6 @@ export const Makes = [
     {
         make: "Toyota",
         image: ToyotaImage,
-        types: [CarType.Sedan, CarType.SUV, CarType.Minivan, CarType.Truck],
         models: [
             {
                 name: "Camry",
@@ -1900,7 +1848,6 @@ export const Makes = [
     {
         make: "Volkswagen",
         image: VolkswagenImage,
-        types: [CarType.Sedan, CarType.SUV, CarType.Minivan],
         models: [
             {
                 name: "Arteon",
@@ -1952,7 +1899,6 @@ export const Makes = [
     {
         make: "Volvo",
         image: VolvoImage,
-        types: [CarType.Sedan, CarType.SUV],
         models: [
             {
                 name: "S60",

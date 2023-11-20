@@ -1,8 +1,9 @@
 import { useState } from "react";
 import MakeSelector from "./MakeSelector"
 import CarTypeSelector from "./CarTypeSelector";
-import { BaseOption, Car, CarType } from "../CarHelper";
+import { BaseOption, Car } from "../CarHelper";
 import CarModelSelector from "./CarModelsSelector";
+import { CarType } from "../CarType";
 
 function CarProcess() {
 
@@ -34,7 +35,7 @@ function CarProcess() {
         <div>
             {currentPage === 0 && <MakeSelector make={selectedMake} onSubmitButtonHandler={goToCarTypePage} />}
             {currentPage === 1 && <CarTypeSelector make={selectedMake} selectCarTypeButtonHandler={goToModelsPage} backPageButtonHandler={goToHomePage} />}
-            {currentPage === 2 && <CarModelSelector carType={selectedType} backPageButtonHandler={goToSelectTypePage} />}
+            {currentPage === 2 && <CarModelSelector selectedMake={selectedMake} carType={selectedType} backPageButtonHandler={goToSelectTypePage} />}
         </div>
     )
 }
