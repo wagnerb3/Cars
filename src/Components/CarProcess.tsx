@@ -34,7 +34,7 @@ function CarProcess() {
         <div>
             {currentPage === 0 && <MakeSelector make={selectedMake} onSubmitButtonHandler={goToCarTypePage} />}
             {currentPage === 1 && <CarTypeSelector make={selectedMake} selectCarTypeButtonHandler={goToModelsPage} backPageButtonHandler={goToHomePage} />}
-            {currentPage === 2 && <CarModelSelector carType={selectedType} backPageButtonHandler={goToSelectTypePage}/>}
+            {currentPage === 2 && <CarModelSelector carType={selectedType} backPageButtonHandler={goToSelectTypePage} />}
         </div>
     )
 }

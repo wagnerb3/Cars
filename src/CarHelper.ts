@@ -72,7 +72,7 @@ export const BaseOption: Car = {
     models: []
 }
 
-export const Makes: [{ make: string, image: string, types: CarType[], models: Model[] }] = [
+export const Makes = [
     {
         make: "Acura",
         image: AcuraImage,
@@ -227,8 +227,35 @@ export const Makes: [{ make: string, image: string, types: CarType[], models: Mo
         ]
     },
     {
-        make: "BMW",
+        make: "Bentley",
         image: BentleyImage,
+        types: [CarType.Sedan, CarType.SUV],
+        models: [
+            {
+                name: "Continental GT Range",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Flying Spur Range",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Mulliner",
+                type: CarType.Sedan,
+                image: ""
+            },
+            {
+                name: "Bentayga Range",
+                type: CarType.SUV,
+                image: ""
+            }
+        ]
+    },
+    {
+        make: "BMW",
+        image: BMWImage,
         types: [CarType.Sedan, CarType.SUV],
         models: [
             {
@@ -328,33 +355,6 @@ export const Makes: [{ make: string, image: string, types: CarType[], models: Mo
             },
             {
                 name: "XM",
-                type: CarType.SUV,
-                image: ""
-            }
-        ]
-    },
-    {
-        make: "Bentley",
-        image: BMWImage,
-        types: [CarType.Sedan, CarType.SUV],
-        models: [
-            {
-                name: "Continental GT Range",
-                type: CarType.Sedan,
-                image: ""
-            },
-            {
-                name: "Flying Spur Range",
-                type: CarType.Sedan,
-                image: ""
-            },
-            {
-                name: "Mulliner",
-                type: CarType.Sedan,
-                image: ""
-            },
-            {
-                name: "Bentayga Range",
                 type: CarType.SUV,
                 image: ""
             }
