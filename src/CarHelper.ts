@@ -728,17 +728,22 @@ export const Makes = [
                 image: ""
             },
             {
-                name: "G70",
+                name: "GV60",
                 type: CarType.SUV,
                 image: ""
             },
             {
-                name: "G80",
+                name: "GV70",
                 type: CarType.SUV,
                 image: ""
             },
             {
-                name: "G90",
+                name: "GV80",
+                type: CarType.SUV,
+                image: ""
+            },
+            {
+                name: "GV90",
                 type: CarType.SUV,
                 image: ""
             }
