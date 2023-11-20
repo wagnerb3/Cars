@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Cars/static/css/main.3ebdec57.css",
-    "main.js": "/Cars/static/js/main.3fbc6b69.js",
+    "main.js": "/Cars/static/js/main.965426ec.js",
     "static/js/787.1b4f38da.chunk.js": "/Cars/static/js/787.1b4f38da.chunk.js",
     "static/media/Lamborghini.png": "/Cars/static/media/Lamborghini.2e3644070962fd4d79a0.png",
     "static/media/Nissan.png": "/Cars/static/media/Nissan.3024657c1f77296778ef.png",
@@ -48,11 +48,11 @@
     "static/media/Acura.png": "/Cars/static/media/Acura.166b2773d0ec63254dc8.png",
     "index.html": "/Cars/index.html",
     "main.3ebdec57.css.map": "/Cars/static/css/main.3ebdec57.css.map",
-    "main.3fbc6b69.js.map": "/Cars/static/js/main.3fbc6b69.js.map",
+    "main.965426ec.js.map": "/Cars/static/js/main.965426ec.js.map",
     "787.1b4f38da.chunk.js.map": "/Cars/static/js/787.1b4f38da.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3ebdec57.css",
-    "static/js/main.3fbc6b69.js"
+    "static/js/main.965426ec.js"
   ]
 }
