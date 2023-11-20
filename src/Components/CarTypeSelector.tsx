@@ -1,4 +1,5 @@
-import { Car, CarType } from "../CarHelper";
+import { Car } from "../CarHelper";
+import { CarType } from "../CarType";
 
 interface Props {
     make: Car;
@@ -13,7 +14,9 @@ function CarTypeSelector({ make, selectCarTypeButtonHandler, backPageButtonHandl
         console.log(`Selected ${type}`);
     }
 
-    const buttons = make.types.map((type, index) => <button type="button" className="btn btn-secondary" value={CarType[type]} key={index} onClick={(e) => handleSelectCarType(CarType[type])}>{CarType[type]}</button>)
+    const types = Array.from(new Set(make.models.map(x => x.type)))
+
+    const buttons = types.map((type, index) => <button type="button" className="btn btn-secondary" value={CarType[type]} key={index} onClick={(e) => handleSelectCarType(CarType[type])}>{CarType[type]}</button>)
 
     return (
         <>
