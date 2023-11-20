@@ -13,7 +13,8 @@ jobs:
       - uses: actions/setup-node@v3
       - name: Deploy Site
         run: |
-          git config --global user.name 'Brett Wagner'
-          git config --global user.email 'got2bwags@gmail.com'
-          npm install
+          git config user.name 'github-actions@github.com'
+          git config user.email 'github-actions'
+          git remote set-url origin https://wagnerb3:${{ secrets.PAT }}@github.com/wagnerb3/ReactTest.git
+          npm install --silent
           npm run deploy
